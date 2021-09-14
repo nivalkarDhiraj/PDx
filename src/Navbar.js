@@ -9,7 +9,7 @@ function Navbar() {
 	return (
 		<div className="navbar">
 			<div className="navbar__left">
-				<Link to="/">HCA Video Library</Link>
+				<Link to="/covid19videos">HCA Video Library</Link>
 			</div>
 			<div className="navbar__middle1">
 				<Link to="/covid19videos">Covide 19 Videos</Link>

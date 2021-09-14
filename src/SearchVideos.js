@@ -7,7 +7,7 @@ function SearchVideos() {
 	const YOUTUBE_API_URL_SEARCH = "https://www.googleapis.com/youtube/v3/search";
 	const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
-	const [fetchedData, setFetchedData] = useState([]);
+	const [fetchedData, setFetchedData] = useState("");
 	const location = useLocation();
 
 	useEffect(() => {
@@ -39,7 +39,7 @@ function SearchVideos() {
 								title={item.snippet.title}
 								description={item.snippet.description}
 								date={item.snippet.publishedAt}
-								videoId = {item.id.videoId? item.id.videoId : item.snippet.resourceId.videoId}
+								videoId = {item.id.videoId}
 							></Video>
 						);
 				  })

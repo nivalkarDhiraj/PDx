@@ -24,7 +24,7 @@ function Covid19Videos() {
 				const data2 = await res2.json();
 				console.log(data1);
 				console.log(data2);
-				const data = !data2.error ? data2.items: data1.items;
+				const data = data2.error ? data1.items: data2.items;
 				console.log(data);
 				setFetchedData(data);
 			} catch (error) {
@@ -45,7 +45,7 @@ function Covid19Videos() {
 								title={item.snippet.title}
 								description={item.snippet.description}
                                 date={item.snippet.publishedAt}
-								videoId = {item.id.videoId? item.id.videoId : item.snippet.resourceId.videoId}
+								videoId = {item.id.videoId}
 							></Video>
 						);
 				  })

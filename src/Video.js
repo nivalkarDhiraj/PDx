@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Video.css";
 
 function Video({ image_url, title, description, date, videoId }) {
-	description = description.length < 300 ? description : description.slice(0, 300) + "...";
+	description = description.length < 200 ? description : description.slice(0, 200) + "...";
 	let publishDate = new Date(date);
 	var options = { year: 'numeric', month: 'long', day: 'numeric' };
 	publishDate = publishDate.toLocaleDateString("en-US", options);

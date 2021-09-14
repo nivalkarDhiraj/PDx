@@ -37,7 +37,7 @@ function AllVideos() {
 								title={item.snippet.title}
 								description={item.snippet.description}
 								date={item.snippet.publishedAt}
-								videoId = {item.id.videoId? item.id.videoId : item.snippet.resourceId.videoId}
+								videoId = {item.snippet.resourceId.videoId}
 							></Video>
 						);
 				  })
