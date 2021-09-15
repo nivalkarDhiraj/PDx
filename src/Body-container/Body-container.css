@@ -1,0 +1,49 @@
+:root {
+    --pip-width: 300px;
+    --pip-height: 200px;
+    --pip-parent-width: 355px;
+}
+  
+.body-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-right: 300px;
+}
+
+.box {
+    position: absolute;
+    width: var(--pip-width);
+    height: var(--pip-height);
+    border-style: double;
+    padding: 25px 25px;
+    background-color: black;
+}
+
+.react-draggable {
+    position: fixed;
+    width: var(--pip-parent-width);
+    height: var(--pip-height);
+}
+
+iframe {
+    width: var(--pip-width);
+    height: var(--pip-height);
+}
+
+.close-btn {
+    border-style: outset;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    margin-left: 340px;
+}
+
+#handle {
+    border-style: outset;
+    font-weight: bold;
+    margin-left: 235px;
+    cursor: pointer;
+}

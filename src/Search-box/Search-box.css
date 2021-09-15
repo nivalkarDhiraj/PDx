@@ -1,0 +1,11 @@
+input {
+    height: 35px;
+    width: 250px;
+    border-radius: 8px;
+    border-style: hidden;
+    background-color: gainsboro
+}
+
+input:hover {
+    background-color: #c1c1f0;
+}

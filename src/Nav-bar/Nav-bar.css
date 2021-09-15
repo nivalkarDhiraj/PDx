@@ -1,0 +1,24 @@
+.nav-bar-container {
+    display: flex;
+    color: rgb(255, 255, 255);
+    margin: 0 100px 0;
+}
+
+.video-button {
+    box-sizing: border-box;
+    padding: 5px 15px 15px 15px;
+    margin-right: 5px;
+    height: 35px;
+    cursor: pointer;
+    width: 150px;
+    background-color: #c1c1f0;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+}
+
+.video-button:hover {
+    color: black;
+    background-color: #9898e6;
+    border-radius: 5px;
+}

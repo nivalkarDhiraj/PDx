@@ -1,0 +1,44 @@
+.video-card {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: groove;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.video-card:hover {
+    background-color: #c1c1f0;
+}
+
+.description {
+    max-height: 85px;
+    overflow: hidden;
+}
+
+.publishdate {
+    position: absolute;
+    bottom: 15px;
+    font-weight: 600;
+}
+
+.heading {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.video-info {
+    position: relative;
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 4px 5px 5px;
+    margin-right: 10px;
+}
+
+.thumbnail > img {
+    border-radius: 10px;
+}
