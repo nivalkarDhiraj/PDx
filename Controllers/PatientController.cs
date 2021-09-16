@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HCA.API.LabTests.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class PatientController : ControllerBase
