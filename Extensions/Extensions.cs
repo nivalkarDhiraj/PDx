@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Builder;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace HCA.API.LabTests.Extensions
 {
@@ -37,6 +38,17 @@ namespace HCA.API.LabTests.Extensions
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HCA Lab Tests", Version = "v1" });
+
+                c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    Description = "Standard Authorization header using the Bearer scheme. Example: \"bearer {token}\"",
+                    In = ParameterLocation.Header,
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                c.OperationFilter<SecurityRequirementsOperationFilter>();
 
                 var filePath = System.IO.Path.Combine(System.AppContext.BaseDirectory, "HCA.API.LabTests.xml");
                 c.IncludeXmlComments(filePath);

@@ -40,3 +40,7 @@ C:\Users\a827445\source\LabTests\obj\Debug\net5.0\HCA.API.LabTests.dll
 C:\Users\a827445\source\LabTests\obj\Debug\net5.0\ref\HCA.API.LabTests.dll
 C:\Users\a827445\source\LabTests\obj\Debug\net5.0\HCA.API.LabTests.pdb
 C:\Users\a827445\source\LabTests\obj\Debug\net5.0\HCA.API.LabTests.genruntimeconfig.cache
+C:\Users\a827445\source\LabTests\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\a827445\source\LabTests\bin\Debug\net5.0\Scrutor.dll
+C:\Users\a827445\source\LabTests\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\a827445\source\LabTests\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

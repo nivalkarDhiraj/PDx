@@ -152,8 +152,8 @@
 	1. Copy code in a folder
 	2. Open LabTest soultion using Microsoft Visual Studio
 	3. Build and Run project HCA.API.LabTests
-	4. Application should run in browser using Swagger UI (for some reason, Swagger is not supporting passing token in request)
-	5. Configure Postman (as per above url and payload details) for generating and passing token
+	4. Application should run in browser using Swagger UI
+	5. Postman can also be configured (as per above url and payload details) for generating and passing token
 	
 #Steps to run
 	1. Login (Credentials as above) to generate token
