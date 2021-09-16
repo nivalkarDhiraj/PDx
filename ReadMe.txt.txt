@@ -155,9 +155,21 @@
 	4. Application should run in browser using Swagger UI
 	5. Postman can also be configured (as per above url and payload details) for generating and passing token
 	
-#Steps to run
-	1. Login (Credentials as above) to generate token
-	2. Once token is generated, copy the generated token to pass with subsequet requests
-	2. Create Patient (if executed Get(), will create 4 hardcoded Patients from backed when Patient table is empty)
-	3. Create LabTest (if executed Get(), will create 4 hardcoded Tests from backed when LabTest table is empty)
-	4. Create LabReport (if executed Get(), will create 4 hardcoded LabReports from backed when LabReport table is empty)
+#Steps to run with Swagger
+	1. Execute Login (Credentials as above) to generate token
+	2. Once token is generated, copy the generated token
+	3. Click Authorize button in page header to open Available authorizations dialogue
+	4. Enter 'Bearer' [space] and then token in the text input under value
+	5. click Authorize and then Close button
+	6. Now you are ready to run, follow sequence as below to handle dependencies 
+	7. Create Patient (if executed Get(), will create hardcoded Patients from backed if Patient table is empty)
+	8. Create LabTest (if executed Get(), will create hardcoded Tests from backed if LabTest table is empty)
+	9. Create LabReport (if executed Get(), will create hardcoded LabReports from if when LabReport table is empty)
+
+#Steps to run with Postman
+	1. Configure Postman requests as per information above
+	2. Execute Login (Credentials as above) to generate token
+	3. Once token is generated, copy the generated token to pass with subsequet requests
+	4. Create Patient (if executed Get(), will create hardcoded Patients from backed if Patient table is empty)
+	5. Create LabTest (if executed Get(), will create hardcoded Tests from backed if LabTest table is empty)
+	6. Create LabReport (if executed Get(), will create hardcoded LabReports from backed if LabReport table is empty)
