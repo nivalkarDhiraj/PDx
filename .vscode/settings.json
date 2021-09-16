@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/aa4470a1-0a3e-4374-8c86-00a4dac6c938/resourceGroups/rg_training/providers/Microsoft.Web/sites/hca-video-library",
+    "appService.deploySubpath": "build"
+}

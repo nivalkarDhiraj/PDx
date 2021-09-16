@@ -1,28 +1,58 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+import YouTube from "react-youtube";
 import "./Video.css";
 
 function Video({ image_url, title, description, date, videoId }) {
+	const [clicked, setClicked] = useState(false);
+
 	description = description.length < 200 ? description : description.slice(0, 200) + "...";
 	let publishDate = new Date(date);
-	var options = { year: 'numeric', month: 'long', day: 'numeric' };
+	var options = { year: "numeric", month: "long", day: "numeric" };
 	publishDate = publishDate.toLocaleDateString("en-US", options);
+	const opts = {
+		width: "100%",
+		playerVars: {
+			autoplay: 1,
+		},
+	};
 
 	return (
-		<Link to={`/youtubevideo/${videoId}`}>
-			<div className="video">
-				<div className="video__left">
-					<img className="video__image" src={image_url} alt="video" />
+		<div className="link">
+			{!clicked ? (
+				<div
+					className="video"
+					onClick={(e) => {
+						setClicked(true);
+					}}
+				>
+					<div className="video__left">
+						<img className="video__image" src={image_url} alt="video" />
+					</div>
+					<div className="video__right">
+						<h2 className="video__title"> {title}</h2>
+						<p className="video__discription">{description}</p>
+						<p className="video__date">
+							Publish Date: <span>{publishDate}</span>
+						</p>
+					</div>
 				</div>
-				<div className="video__right">
-					<h2 className="video__title"> {title}</h2>
-					<p className="video__discription">{description}</p>
-					<p className="video__date">
-						Publish Date: <span>{publishDate}</span>
-					</p>
+			) : (
+				<div className="youtube">
+					<button
+						className="youtube__close"
+						onClick={() => {
+							setClicked(false);
+						}}
+					>
+						x
+					</button>
+					<YouTube className="youtube__video" videoId={videoId} opts={opts} />
+
+					{console.log(clicked)}
 				</div>
-			</div>
-		</Link>
+			)}
+		</div>
 	);
 }
 

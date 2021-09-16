@@ -3,13 +3,13 @@ import Video from "./Video";
 import { WaveLoading } from 'react-loadingg';
 import "./Covid19Videos.css";
 
-function Covid19Videos() {
+function Covid19Videos(props) {
 	const YOUTUBE_API_URL_PLAYLIST = "https://www.googleapis.com/youtube/v3/playlistItems";
 	const YOUTUBE_API_URL_SEARCH = "https://www.googleapis.com/youtube/v3/search";
 	const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 	const [fetchedData, setFetchedData] = useState("");
-
+	console.log(props);
 	useEffect(() => {
 		const fetchdata = async () => {
 			try {

@@ -1,29 +1,54 @@
-.video{
-    display: flex;
-    padding: 15px;
-    color: black;
-    background-color:rgb(235, 235, 235);
-    margin-top: 15px;
-    width: 800px;
-    box-shadow: 0 0 5px;
+.video {
+	display: flex;
+	padding: 15px;
+	color: black;
+	background-color: #fafafa;
+	margin-top: 15px;
+	width: 800px;
+	box-shadow: 0 0 5px;
+	text-decoration: none;
 }
 
+.link a {
+	text-decoration: none;
+}
 .video__title {
-    font-size: 1.3em;
-    padding-bottom: 8px;
+	font-size: 1.3em;
+	padding-bottom: 8px;
 }
 
-.video__image{
-    max-height: 140px;
-    padding-right: 15px;
+.video__image {
+	max-height: 140px;
+	padding-right: 15px;
 }
 
-.video__right{
-    display: flex;
-    flex-direction: column;
+.video__right {
+	display: flex;
+	flex-direction: column;
 }
 
-.video__date{
-    margin-top: auto;
-    font-weight: bold;
+.video__date {
+	margin-top: auto;
+	font-weight: bold;
+}
+.youtube{
+    position: relative;
+}
+
+.youtube__video {
+	padding: 15px;
+	color: black;
+	background-color: #fafafa;
+	margin-top: 15px;
+	width: 800px;
+	box-shadow: 0 0 5px;
+	text-decoration: none;
+}
+
+.youtube__close{
+    z-index: 10;
+    margin-top: 15px;
+    margin-left: 101%;
+    position: absolute;
+    background-color: rgb(255, 133, 133);
 }
