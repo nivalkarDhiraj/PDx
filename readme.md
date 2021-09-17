@@ -16,6 +16,10 @@ The in-memory cache has been implemented to support all CURD operation, and all 
 
 The solution file is placed inside folder (HCA.PlatformDigital) which can be used to open/explore all projects.
 
+## Sample Payload
+
+The sample payload for each controller method is added in folder SamplePayload to test API.
+
 
 ## Documentation
 
@@ -24,12 +28,14 @@ The swagger has been implemented for API documentation purpose. The swagger endp
 
 Please follow below steps to test the service: 
 
-### Auth
+### Auth Controller
 
 
-baseurl/auth: Please use this endpoint to generate token by providing valid credential as basic-auth. Please refer appsettings.json file having section identityconfiguration and key (email, accesskey) as credential.
+baseurl/auth: Please use this endpoint to generate token by providing valid credential as basic-auth as HttpHeader parameters. Please refer appsettings.json file with section identityconfiguration and key (email, accesskey) as credential.
 
-### Patient
+baseurl/auth/token: This method is used to generate token by providing the identity credential in body as Json.
+
+### Patient Controller
 
 
 {baseurl}/patient/create: This endpoint can be used to create patient with below payload.
@@ -72,7 +78,7 @@ A valid patient id needs to be passed as route parameter to delete patient. You 
 
 The test name is mandatory parameter for this endpoint and date range (sate date and end date) is optional.
 
-### LabReport
+### LabReport Controller
 
 
 {baseurl}/labreport/create: This endpoint can be used to create lab report for a patient and patient should exists in the system. The below payload can be used to create lab report.
@@ -227,7 +233,6 @@ lab report for a patient. The lab report and patient must exist to update lab re
   ]
 }
 
-
 The lab report is and patient id is required field for this endpoint. You can update lab report test details as well as patient for lab report.
 
 {baseurl}/labreport/delete: This endpoint can be used to delete lab report already created. Please refer below endpoint and parameter to delete lab report.
@@ -241,5 +246,7 @@ The valid report id needs to pass in order to delete a lab report and only lab r
 
 {baseurl}/patient/get/{reportId}: This endpoint can be used to get specific lab report details by report id. 
 
+### Unit Testing
 
+There a test folder in the solution having unit test project for each indivisual components, although some of them have not been completed considering short span of time.
 
