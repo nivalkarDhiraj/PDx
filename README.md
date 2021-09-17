@@ -12,11 +12,11 @@ There are 6 codebases in this repository with different branches-
   - MilindG
   - ViranjaySingh
 
-#### To download the code the code to your local machine
-- open command propmt
+#### To download the code to your local machine
+- open command promt
 - Enter `git clone https://github.com/nivalkarDhiraj/PDx.git --branch BranchName --single-branch`
 - `cd PDx`
-- Follow the readme in that folder
+- Follow the readme in the newly created PDx folder
 
 ## Developer's Section
 
