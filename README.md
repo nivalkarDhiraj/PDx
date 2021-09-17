@@ -11,14 +11,10 @@ https://hca-video-library.azurewebsites.net/
 
 You will need `node` and `npm` installed globally on your machine.  
 
-Install the dependencies:
+- Install the dependencies: `npm install`   
 
-`npm install`   
+- Enter your youtube api key in .env.local file
 
-To Start Server:
+- To Start Server: `npm start`  
 
-`npm start`  
-
-To Visit App:
-
-`localhost:3000/`  
+- To Visit App: `localhost:3000/`  
