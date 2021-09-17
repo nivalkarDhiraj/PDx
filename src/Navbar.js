@@ -32,7 +32,7 @@ function Navbar() {
 				></input>
 			</div>
 			<div className="navbar__right">
-				<Link>Welcome Test User!</Link>
+				<Link to="/covid19videos">Welcome Test User!</Link>
 			</div>
 		</div>
 	);

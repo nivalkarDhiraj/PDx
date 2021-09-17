@@ -19,8 +19,8 @@ function App() {
 							return <Redirect to="/covid19videos" />;
 						}}
 					/>
-					<Route path="/covid19videos">
-						<Covid19Videos />
+					<Route path="/covid19videos" >
+						<Covid19Videos /> 
 					</Route>
 					<Route path="/allvideos">
 						<AllVideos />

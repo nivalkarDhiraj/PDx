@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import YouTube from "react-youtube";
 import "./Video.css";
 
@@ -13,7 +12,9 @@ function Video({ image_url, title, description, date, videoId }) {
 	const opts = {
 		width: "100%",
 		playerVars: {
+			origin: window.location.origin,
 			autoplay: 1,
+			host: `${window.location.protocol}//www.youtube.com`,
 		},
 	};
 

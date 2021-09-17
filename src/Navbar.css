@@ -19,8 +19,12 @@
 	text-decoration: none;
 }
 
+.navbar a:hover{
+	color: #ffffff;
+}
+
 .navbar__left > a {
-    color: white;
+    color: #ffffff;
     font-weight: bold;
 }
 
