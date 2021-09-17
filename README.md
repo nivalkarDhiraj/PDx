@@ -30,3 +30,4 @@ There are 6 codebases in this repository with different branches-
 - Commit the changes with message => `git commit -m "Your Commit Message"`
 - Push your code to the remote(this) repo using => `git push -u origin YourBranchName`
 - Authenticate via browser if asked to do so.
+## Note: Please refer indivisual branch README file to setup and application.
