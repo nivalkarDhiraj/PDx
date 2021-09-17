@@ -5,7 +5,7 @@ Email : Dhiraj.Nivalkar@atos.com
 
 Demo is hosted in Azure. Please click the link below
 
-http://hca-video-library.azurewebsites.net/
+https://hca-video-library.azurewebsites.net/
 
 ## Installation and Setup Instructions for local machine
 
