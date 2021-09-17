@@ -49,8 +49,6 @@ function Video({ image_url, title, description, date, videoId }) {
 						x
 					</button>
 					<YouTube className="youtube__video" videoId={videoId} opts={opts} />
-
-					{console.log(clicked)}
 				</div>
 			)}
 		</div>
