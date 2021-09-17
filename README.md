@@ -1,3 +1,8 @@
+## ################################
+Creator : Saurabh Hangotra
+Email : saurabh.hangotra.external@atos.com
+
+## ################################
 # Demo app hosted on Azure
 
 Demo is hosted in Azure. Please click the link below
@@ -7,7 +12,11 @@ https://youtubeapp.azurewebsites.net/
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can install:
+
+### `npm install`
+
+Install all packages for application
 
 ### `npm start`
 
