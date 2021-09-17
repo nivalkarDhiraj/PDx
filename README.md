@@ -1,21 +1,28 @@
 # Project Details
 
 Name: hcaclient
+
 Author: Nilesh Kolhe
 
 This code is deployed as a Azure Web App.
-Open [https://hca-vid-lib-dev.azurewebsites.net] to view it.
+
+Open
+### https://hca-vid-lib-dev.azurewebsites.net 
+to view it.
 
 ## Available Scripts
 
-To run the project locally, run:
+Clone the below Repo on to your local machine.
+### `git clone https://github.com/nivalkarDhiraj/PDx.git`
 
-###`npm i`
+Check out the below branch :-
+### `git checkout Nilesh`
 
-This will install all the npm packages that are needed for this project.
+Run below command to install all the npm packages that are needed for this project.
+### `npm i`
 
 Then run,
 ### `npm run start`
 
 Above command Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open http://localhost:3000 to view it in the browser.
