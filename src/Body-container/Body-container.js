@@ -112,7 +112,11 @@ class Bodycontainer extends React.Component {
                   defaultPosition={{x: 740, y: 260}}
                 >
                   <div>
-                      <span className="close-btn" onClick={this.closeDraggable.bind(this)}>X
+                      <span id="handle">
+                        Drag here
+                      </span>
+                      <span className="close-btn" onClick={this.closeDraggable.bind(this)}>
+                        X
                       </span>
                       <div className="box">
                         <iframe
