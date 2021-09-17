@@ -6,13 +6,28 @@
     <members>
         <member name="M:HCA.PlatformDigital.Controllers.AuthenticationController.Auth">
              <summary>
-             Generate Token.
+             Auth using HttpHeader to generate token.
              </summary>
              <remarks>
              Sample request:
             
              Authorization - BasicAuth
              Provide credential details using basic auth.
+                    
+             </remarks>
+             <response code="200">Token and Identity details.</response>
+             <response code="400">Invalid Auth parameters.</response>
+             <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.AuthenticationController.Auth(HCA.PlatformDigital.Controllers.AuthenticationController.Credential)">
+             <summary>
+             Auth using HttpPost parameter to generate token.
+             </summary>
+             <remarks>
+             Sample request:
+            
+             Authorization - BasicAuth
+             Provide credential details.
                     
              </remarks>
              <response code="200">Token and Identity details.</response>

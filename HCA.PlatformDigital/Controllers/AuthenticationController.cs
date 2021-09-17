@@ -13,8 +13,6 @@ using System.Threading.Tasks;
 
 namespace HCA.PlatformDigital.Controllers
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
     public class AuthenticationController : ControllerBase
     {
         private readonly ILog _logger;
@@ -32,7 +30,7 @@ namespace HCA.PlatformDigital.Controllers
             
         }
         /// <summary>
-        /// Generate Token.
+        /// Auth using HttpHeader to generate token.
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -48,13 +46,12 @@ namespace HCA.PlatformDigital.Controllers
         [Route("auth")]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(int), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(int), StatusCodes.Status401Unauthorized)]
-        
+        [ProducesResponseType(typeof(int), StatusCodes.Status401Unauthorized)]        
         public IActionResult Auth()
         {
             IActionResult response = Unauthorized();
             string identity;
-
+            User user = new User();
             try
             {
                 if (!string.IsNullOrEmpty(Request.Headers["Authorization"]))
@@ -79,24 +76,23 @@ namespace HCA.PlatformDigital.Controllers
                     }
                     else
                     {
-                        User user = new User();
                         user.EmailAddress = arrUsernamePassword[0].Trim();
-                        user.Password = arrUsernamePassword[1];
-                        var userDetails = _authenticator.Authenticate(user);
-                        if (userDetails != null)
-                        {
-                            var tokenString = _authenticator.CreateToken(userDetails.EmailAddress, userDetails.Password);
-                            return response = Ok(new { token = tokenString, userDetails = userDetails });
-                        }
-                        else
-                        {
-                            return StatusCode(401, string.Empty);
-                        }
+                        user.Password = arrUsernamePassword[1];                       
                     }
-                }
+                }               
                 else
                 {
                     return StatusCode(400, string.Empty);
+                }
+                var userDetails = _authenticator.Authenticate(user);
+                if (userDetails != null)
+                {
+                    var tokenString = _authenticator.CreateToken(userDetails.EmailAddress, userDetails.Password);
+                    return response = Ok(new { token = tokenString, userDetails = userDetails });
+                }
+                else
+                {
+                    return StatusCode(401, string.Empty);
                 }
             }
             catch (Exception ex)
@@ -104,6 +100,64 @@ namespace HCA.PlatformDigital.Controllers
                 _logger.Error(ex.Message + " " + ex.StackTrace);
                 return StatusCode(500, string.Empty);
             }
+        }
+
+        /// <summary>
+        /// Auth using HttpPost parameter to generate token.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        /// Authorization - BasicAuth
+        /// Provide credential details.
+        ///        
+        /// </remarks>
+        /// <response code="200">Token and Identity details.</response>
+        /// <response code="400">Invalid Auth parameters.</response>
+        /// <response code="401">Unauthorized</response>
+        [HttpPost]
+        [Route("auth/token")]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(int), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(int), StatusCodes.Status401Unauthorized)]        
+        
+        public IActionResult Auth([FromBody] Credential credential)
+        {
+            IActionResult response = Unauthorized();
+            User user = new User();
+            try
+            {
+                if (credential != null)
+                {
+                    user.EmailAddress = credential.Username;
+                    user.Password = credential.Password;
+                }
+                else
+                {
+                    return StatusCode(400, string.Empty);
+                }
+                var userDetails = _authenticator.Authenticate(user);
+                if (userDetails != null)
+                {
+                    var tokenString = _authenticator.CreateToken(userDetails.EmailAddress, userDetails.Password);
+                    return response = Ok(new { token = tokenString, userDetails = userDetails });
+                }
+                else
+                {
+                    return StatusCode(401, string.Empty);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message + " " + ex.StackTrace);
+                return StatusCode(500, string.Empty);
+            }
+        }
+
+        public class Credential
+        {
+            public string Username { get; set; }
+            public string Password { get; set; }
         }
     }
 }
