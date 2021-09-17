@@ -13,7 +13,7 @@ You will need `node` and `npm` installed globally on your machine.
 
 - Install the dependencies: `npm install`   
 
-- Enter your youtube api key in .env.local file
+- Enter your youtube api key in .env.local file (if you dont have any api key , no need to enter) 
 
 - To Start Server: `npm start`  
 
