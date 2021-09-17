@@ -3,15 +3,15 @@ import './Body-container.css';
 import Draggable from 'react-draggable';
 import moment from 'moment';
 import Videocard from '../Video-card/Video-card';
+import { PROD_API_KEY, G_API, CHANNEL_ID } from '../Constants';
 import { searchValueSharedService, playListIdSharedService, pipSharedService } from '../Shared-Service/Shared-service';
 
 class Bodycontainer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.gapi = 'https://www.googleapis.com/youtube/v3/';
-    // this.apiKey = 'AIzaSyD8y7e2UigOwZG-9blGBVM3ComcfRyRyV0';
-    this.apiKey = 'AIzaSyDlhenQOZvU2pPITQq6LF5ihNCm4A_Qusw';
+    this.gapi = G_API;
+    this.apiKey = PROD_API_KEY;
     this.playlistId = '';
     
     this.state = {
@@ -39,8 +39,8 @@ class Bodycontainer extends React.Component {
   }
 
   ApiCall() {
-    const channelId = 'UCL03ygcTgIbe36o2Z7sReuQ'
-    const COVID_KEYWORD = 'Covid-19'
+    const channelId = CHANNEL_ID;
+    const COVID_KEYWORD = 'Covid-19';
     let videoList = [];
     const isCovidVideo = this.playlistId === '' ? false: true;
 
@@ -64,11 +64,8 @@ class Bodycontainer extends React.Component {
               }
               return null;
             });
-            console.log('Covid Videos: ', covidVideoList);
-            console.log('Non Covid Videos: ', nonCovidVideoList);
             videoList = [...covidVideoList, ...nonCovidVideoList];
           }
-          console.log('Videos: ', videoList);
           this.setState({videos: videoList, filteredVideos: videoList});
       });
   }
