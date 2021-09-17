@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import Video from "./Video";
 import { WaveLoading } from "react-loadingg";
 import "./Covid19Videos.css";
-import {YOUTUBE_API_URL_SEARCH, CHANNEL_ID} from "./config";
+import {YOUTUBE_API_URL_SEARCH, CHANNEL_ID, API_KEY} from "./config";
 
 function Covid19Videos() {
-	const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
-
 	const [fetchedData, setFetchedData] = useState("");
 	
 	useEffect(() => {

@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import Video from "./Video";
 import "./AllVideos.css";
 import { WaveLoading } from "react-loadingg";
-import {YOUTUBE_API_URL_PLAYLIST} from "./config";
+import {YOUTUBE_API_URL_PLAYLIST, API_KEY} from "./config";
 
 function AllVideos() {
-	const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
-
 	const [fetchedData, setFetchedData] = useState("");
 
 	useEffect(() => {
