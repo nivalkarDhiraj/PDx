@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>e99da605-bba1-491a-b5c7-622e182cc23e</UserSecretsId>
+    <AssemblyName>HCA.PatientDigital</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\HCA\LatestCode\HCA.PlatformDigital\HCA.PatientDigital.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\HCA\LatestCode\HCA.PlatformDigital\HCA.PatientDigital.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="5.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HCA.PatientDigital.BL\HCA.PatientDigital.BL.csproj" />
+    <ProjectReference Include="..\HCA.PatientDigital.Identity\HCA.PatientDigital.Identity.csproj" />
+    <ProjectReference Include="..\HCA.PlatformDigital.Entity\HCA.PatientDigital.Entity.csproj" />
+  </ItemGroup>
+
+
+</Project>

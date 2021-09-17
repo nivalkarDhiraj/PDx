@@ -1,0 +1,244 @@
+{
+  "reportId": "",
+  "reportName": "Blood Test",
+  "reportTime": "2019-02-15T07:16:59.706Z",
+  "patientId": "516b17fc-52c3-4ae0-ae25-86936bbabb2a",
+  "labTests": [
+    {
+      "testName": "CBC",
+      "testDateTime": "2021-09-14T07:16:59.706Z",
+      "tests": [
+        {
+          "name": "WHITE BLOOD CELL COUNT",
+          "result": "3.9",
+          "resultExpected": "3.8-10.8 Thousand/uL",
+          "technology": "PHOTOMETRY",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC ",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "RED BLOOD CELL COUNT",
+          "result": "5.24",
+          "resultExpected": "4.20 - 5.80 Million/uL",
+          "technology": "PH",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC TEST",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "HEMOGLOBIN",
+          "result": "16.5",
+          "resultExpected": "13.2 - 17.1 g/dL",
+          "technology": "PH",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC ",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "MCV",
+          "result": "94.9",
+          "resultExpected": "80.0 - 100.0 fL",
+          "technology": "PH",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC ",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "description": "desc"
+    },
+    {
+      "testName": "GLUCOSE",
+      "testDateTime": "2021-09-14T07:16:59.706Z",
+      "tests": [
+        {
+          "name": "BLOOD SUGAR FASTING",
+          "result": "90",
+          "resultExpected": "100 - 130 Thousand/uL",
+          "technology": "PHOTOMETRY",
+          "method": "GOD-PAP METHOD",
+          "description": "Bllod Sugar",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "BLOOD SUGAR POST LUNCH",
+          "result": "130",
+          "resultExpected": "150 - 200 Thousand/uL",
+          "technology": "PH",
+          "method": "GOD-PAP METHOD",
+          "description": "BLOOD SUGAR TEST",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "description": "BLOOD TEST"
+    },
+    {
+      "testName": "LIPID",
+      "testDateTime": "2021-09-14T07:16:59.706Z",
+      "tests": [
+        {
+          "name": "TOTAL CHOLESTEROL",
+          "result": "212",
+          "resultExpected": "125-200 mg/dl",
+          "technology": "PHOTOMETRY",
+          "method": "CHOL",
+          "description": "LIPID",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "LDL CHOLESTEROL",
+          "result": "75",
+          "resultExpected": "85-130 mg/dl",
+          "technology": "PH",
+          "method": "CHOL",
+          "description": "LIPID",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "HDL CHOLESTEROL",
+          "result": "37",
+          "resultExpected": "35-80 mg/dl",
+          "technology": "PH",
+          "method": "CHOL",
+          "description": "LIPID",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "description": "LIPID PROFILE"
+    },
+    {
+      "testName": "URINNALYSIS",
+      "testDateTime": "2021-09-14T07:16:59.706Z",
+      "tests": [
+        {
+          "name": "APPEARANCE",
+          "result": "",
+          "resultExpected": "",
+          "technology": "",
+          "method": "",
+          "description": "URINNALYSIS",
+          "testParameters": [
+            {
+              "name": "Pale Yellow, Clear",
+              "value": "48 (34.78)"
+            },
+            {
+              "name": "Pale Yellow, Turbid",
+              "value": "43 (31.16)"
+            },
+            {
+              "name": "Yellow, Clear",
+              "value": "9 (6.52)"
+            },
+            {
+              "name": "Yellow, Turbid",
+              "value": "22 (15.94)"
+            }
+          ]
+        },
+        {
+          "name": "GLOCOSE - PRESENT",
+          "result": "3 (2.15)",
+          "resultExpected": "",
+          "technology": "",
+          "method": "",
+          "description": "URINNALYSIS",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "GLOCOSE - ABSENT",
+          "result": "136 (97.85)",
+          "resultExpected": "",
+          "technology": "",
+          "method": "",
+          "description": "URINNALYSIS",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "PROTEIN - PRESENT",
+          "result": "22 (15.83)",
+          "resultExpected": "",
+          "technology": "",
+          "method": "",
+          "description": "URINNALYSIS",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "PROTEIN - ABSENT",
+          "result": "117 (84.17)",
+          "resultExpected": "",
+          "technology": "",
+          "method": "",
+          "description": "URINNALYSIS",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "description": "LIPID PROFILE"
+    }
+  ]
+}

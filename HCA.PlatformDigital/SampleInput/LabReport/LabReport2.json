@@ -1,0 +1,71 @@
+{
+  "reportId": "",
+  "reportName": "Blood Test",
+  "reportTime": "2021-02-02T07:16:59.706Z",
+  "patientId": "64d83c78-6418-45a1-a776-c64a8b21ec5a",
+  "labTests": [
+    {
+      "testName": "CBC",
+      "testDateTime": "2021-09-14T07:16:59.706Z",
+      "tests": [
+        {
+          "name": "WHITE BLOOD CELL COUNT",
+          "result": "3.9",
+          "resultExpected": "3.8-10.8 Thousand/uL",
+          "technology": "PHOTOMETRY",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC ",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "RED BLOOD CELL COUNT",
+          "result": "5.24",
+          "resultExpected": "4.20 - 5.80 Million/uL",
+          "technology": "PH",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC TEST",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "HEMOGLOBIN",
+          "result": "16.5",
+          "resultExpected": "13.2 - 17.1 g/dL",
+          "technology": "PH",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC ",
+          "testParameters": [
+            {
+              "name": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "MCV",
+          "result": "94.9",
+          "resultExpected": "80.0 - 100.0 fL",
+          "technology": "PH",
+          "method": "GOD-PAP METHOD",
+          "description": "CBC ",
+          "testParameters": [
+            {
+              "name": "Param1",
+              "value": "This is to describe more test property"
+            }
+          ]
+        }
+      ],
+      "description": "desc"
+    }
+  ]
+}

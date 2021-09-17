@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HCA.PatientDigital</name>
+    </assembly>
+    <members>
+        <member name="M:HCA.PlatformDigital.Controllers.AuthenticationController.Auth">
+             <summary>
+             Generate Token.
+             </summary>
+             <remarks>
+             Sample request:
+            
+             Authorization - BasicAuth
+             Provide credential details using basic auth.
+                    
+             </remarks>
+             <response code="200">Token and Identity details.</response>
+             <response code="400">Invalid Auth parameters.</response>
+             <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.LabReportController.Create(HCA.PlatformDigital.Entity.LabReport)">
+             <summary>
+             Create a LabReport.
+             </summary>
+             <remarks>
+             PatientId is required and should exists.
+             
+             Sample request:
+                   
+            {
+              "reportId": "",
+              "reportName": "Blood Test",
+              "reportTime": "2021-01-01T07:16:59.706Z",
+              "patientId": "6d349d02-53b1-407f-bedb-2668b4d988b4",
+              "labTests": [
+                {
+                  "testName": "CBC",
+                  "testDateTime": "2021-09-14T07:16:59.706Z",
+                  "tests": [
+                    {
+                      "name": "WHITE BLOOD CELL COUNT",
+                      "result": "3.9",
+                      "resultExpected": "3.8-10.8 Thousand/uL",
+                      "technology": "PHOTOMETRY",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC ",
+                      "testParameters": [
+                        {
+                          "name": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "RED BLOOD CELL COUNT",
+                      "result": "5.24",
+                      "resultExpected": "4.20 - 5.80 Million/uL",
+                      "technology": "PH",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC TEST",
+                      "testParameters": [
+                        {
+                          "name": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "HEMOGLOBIN",
+                      "result": "16.5",
+                      "resultExpected": "13.2 - 17.1 g/dL",
+                      "technology": "PH",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC ",
+                      "testParameters": [
+                        {
+                          "name": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "MCV",
+                      "result": "94.9",
+                      "resultExpected": "80.0 - 100.0 fL",
+                      "technology": "PH",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC ",
+                      "testParameters": [
+                        {
+                          "name": "Param1",
+                          "value": "This is to describe more test property"
+                        }
+                      ]
+                    }
+                  ],
+                  "description": "desc"
+                }
+              ]
+            }
+             </remarks>
+             <response code="200">LabReport Added Successfully</response>
+             <response code="400">Invalid Lab Report Details</response>
+             <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.LabReportController.Update(HCA.PlatformDigital.Entity.LabReport)">
+             <summary>
+             Update a LabReport.
+             </summary>
+             <remarks>
+             The LabReport and Patient should exists (PatientId and reportId is required).
+             
+             Sample request:
+                   
+            {
+              "reportId": "d7c75b33-d2ef-43ef-9d90-68054a9bfb56",
+              "reportName": "Blood Test",
+              "reportTime": "2021-01-01T07:16:59.706Z",
+              "patientId": "6d349d02-53b1-407f-bedb-2668b4d988b4",
+              "labTests": [
+                {
+                  "testName": "CBC",
+                  "testDateTime": "2021-09-14T07:16:59.706Z",
+                  "tests": [
+                    {
+                      "name": "WHITE BLOOD CELL COUNT",
+                      "result": "3.9",
+                      "resultExpected": "3.8-10.8 Thousand/uL",
+                      "technology": "PHOTOMETRY",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC ",
+                      "testParameters": [
+                        {
+                          "name": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "RED BLOOD CELL COUNT",
+                      "result": "5.24",
+                      "resultExpected": "4.20 - 5.80 Million/uL",
+                      "technology": "PH",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC TEST",
+                      "testParameters": [
+                        {
+                          "name": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "HEMOGLOBIN",
+                      "result": "16.5",
+                      "resultExpected": "13.2 - 17.1 g/dL",
+                      "technology": "PH",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC ",
+                      "testParameters": [
+                        {
+                          "name": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "MCV",
+                      "result": "94.9",
+                      "resultExpected": "80.0 - 100.0 fL",
+                      "technology": "PH",
+                      "method": "GOD-PAP METHOD",
+                      "description": "CBC ",
+                      "testParameters": [
+                        {
+                          "name": "Param1",
+                          "value": "This is to describe more test property"
+                        }
+                      ]
+                    }
+                  ],
+                  "description": "desc"
+                }
+              ]
+            }
+             </remarks>
+             <response code="200">LabReport Added Successfully.</response>
+             <response code="400">Invalid Lab Report Details.</response>
+             <response code="401">Unauthorized.</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.LabReportController.Delete(System.String)">
+            <summary>
+            Delete a Lab Report.
+            </summary>
+            <remarks>
+            Sample request:
+            
+            /labreport/delete/{reportId}
+            (reportId is required)
+            
+            Provide reportId as route parameter.
+            </remarks>
+            <response code="200">LabReport Deleted Successfull (true).</response>
+            <response code="200">LabReport not valid.</response>
+            <response code="400">Invalid LabReport Details</response>
+            <response code="401">Unauthorized</response>        
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.LabReportController.Get">
+            <summary>
+            List of LabReports.
+            </summary>
+            <remarks>        
+            /labreport/get        
+            </remarks>
+            <response code="200">List Of LabReports.</response>
+            <response code="204">NoContent</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.LabReportController.GetById(System.String)">
+            <summary>
+            Get lab report by labReportId.
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+            /labreport/get/{labReportId}
+            
+            Provide labReportId as route parameter.
+                    
+            labReportId is required.
+            </remarks>
+            <response code="200">LabReport details</response>
+            <response code="204">NoContent</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.PatientController.Create(HCA.PlatformDigital.Entity.Patient)">
+             <summary>
+             Creates a patient.
+             </summary>
+             <remarks>
+             Sample request:
+            
+             {
+              "patientId": "",
+              "name": "James John",
+              "dob": "1972-10-15",
+              "isMale": true,
+              "contactNo": ""
+            }
+            
+             </remarks>
+             <response code="200">Patient Added Successful</response>
+             <response code="400">Invalid Patient Details</response>
+             <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.PatientController.Update(HCA.PlatformDigital.Entity.Patient)">
+             <summary>
+             Update a patient.
+             </summary>
+             <remarks>
+             Sample request:(PatientId is required)
+            
+             {
+              "patientId": "db88cc9c-f911-4ce2-afef-e229244a93e0",
+              "name": "James John",
+              "dob": "1975-12-15",
+              "isMale": true,
+              "contactNo": ""
+            }
+            
+             </remarks>
+             <response code="200">Patient Updated Successful</response>
+             <response code="400">Invalid Patient Details</response>
+             <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.PatientController.Delete(System.String)">
+            <summary>
+            Delete a patient.
+            </summary>
+            <remarks>
+            Sample request:
+            /patient/delete/{patientId}
+            (PatientId is required)
+            PatientId as route parameter.
+            </remarks>
+            <response code="200">Patient Deleted Successfull (true).</response>
+            <response code="200">Patient not valid.</response>
+            <response code="400">Invalid Patient Details</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.PatientController.Get">
+            <summary>
+            List of patients.
+            </summary>
+            <remarks>        
+            /patient/get        
+            </remarks>
+            <response code="200">List Of patients.</response>
+            <response code="204">NoContent</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.PatientController.GetById(System.String)">
+            <summary>
+            Get patient details by patientid.
+            </summary>
+            <remarks>
+            Sample request:
+            /patient/get/{patientId}                
+            Pass PatientId as route parameter.
+            PatientId is required.
+            </remarks>
+            <response code="200">Patient details</response>
+            <response code="204">NoContent</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:HCA.PlatformDigital.Controllers.PatientController.GetByTestName(System.String,System.String,System.String)">
+            <summary>
+            Search patient by test name and date range.
+            </summary>
+            <remarks>
+            Sample request:(PatientId is required)
+            {URL}/patient/get/031af2b1-225a-4e28-af57-0f8e566984d5                
+            Pass PatientId as route parameter.
+            </remarks>
+            <response code="200">List Of patient details</response>
+            <response code="204">NoContent</response>
+            <response code="401">Unauthorized</response>
+        </member>
+    </members>
+</doc>
