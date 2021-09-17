@@ -13,12 +13,12 @@ class Videocard extends React.Component {
         return (
             <div className="video-card" onClick={this.PlayPIPVideo.bind(this)}>
                 <div className="thumbnail">
-                        <img 
-                            height={this.props.video.thumbnail.height + 10}
-                            width={this.props.video.thumbnail.width}
-                            src={this.props.video.thumbnail.url}
-                            alt=""
-                        />
+                    <img 
+                        height={this.props.video.thumbnail.height + 10}
+                        width={this.props.video.thumbnail.width}
+                        src={this.props.video.thumbnail.url}
+                        alt=""
+                    />
                 </div>
                 <div className="video-info">
                     <div className="heading"> {this.props.video.title} </div>

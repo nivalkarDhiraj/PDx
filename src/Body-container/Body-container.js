@@ -3,7 +3,6 @@ import './Body-container.css';
 import Draggable from 'react-draggable';
 import moment from 'moment';
 import Videocard from '../Video-card/Video-card';
-// import Resizablevideo from '../Resizable-video/Resizable-video'
 import { searchValueSharedService, playListIdSharedService, pipSharedService } from '../Shared-Service/Shared-service';
 
 class Bodycontainer extends React.Component {
