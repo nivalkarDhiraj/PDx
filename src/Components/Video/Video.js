@@ -5,7 +5,8 @@ import "./Video.css";
 function Video({ image_url, title, description, date, videoId }) {
 	const [clicked, setClicked] = useState(false);
 
-	description = description.length < 200 ? description : description.slice(0, 200) + "...";
+	const wordLimit = 200;
+	description = description.length < wordLimit ? description : description.slice(0, wordLimit) + "...";
 	let publishDate = new Date(date);
 	var options = { year: "numeric", month: "long", day: "numeric" };
 	publishDate = publishDate.toLocaleDateString("en-US", options);

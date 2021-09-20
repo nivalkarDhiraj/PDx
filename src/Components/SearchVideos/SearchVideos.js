@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { WaveLoading } from "react-loadingg";
 import { useLocation } from "react-router";
-import Video from "./Video";
-import {YOUTUBE_API_URL_SEARCH, CHANNEL_ID, API_KEY} from "./config";
+import Video from "../Video/Video";
+import {YOUTUBE_API_URL_SEARCH, CHANNEL_ID, API_KEY} from "../../Utils/config";
 
 function SearchVideos() {
 	const [fetchedData, setFetchedData] = useState("");

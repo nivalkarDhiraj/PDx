@@ -1,41 +1,28 @@
 import React, { useEffect, useState } from "react";
-import Video from "./Video";
+import Video from "../Video/Video";
+import "./AllVideos.css";
 import { WaveLoading } from "react-loadingg";
-import "./Covid19Videos.css";
-import {YOUTUBE_API_URL_SEARCH, CHANNEL_ID, API_KEY} from "./config";
+import {YOUTUBE_API_URL_PLAYLIST, API_KEY} from "../../Utils/config";
 
-function Covid19Videos() {
+function AllVideos() {
 	const [fetchedData, setFetchedData] = useState("");
-	
+
 	useEffect(() => {
 		const fetchdata = async () => {
 			try {
 				const res = await fetch(
-					`${YOUTUBE_API_URL_SEARCH}?` +
+					`${YOUTUBE_API_URL_PLAYLIST}?` +
 						new URLSearchParams({
-							key: API_KEY,
 							part: "snippet",
-							q: "COVID-19",
-							channelId: CHANNEL_ID,
+							playlistId: "UUL03ygcTgIbe36o2Z7sReuQ",
+							maxResults: 50,
 							order: "date",
-							maxResults: 25,
+							key: API_KEY,
 						})
 				);
 				const data = await res.json();
 
-				const videoList = data.items;
-				const playlistName = "COVID-19 Vaccine Podcast";
-
-				for (let i = 0, j = 0; i < videoList.length; i++) {
-					if (videoList[i].snippet.title.includes(playlistName)) {
-						let temp = videoList[i];
-						videoList[i] = videoList[j];
-						videoList[j] = temp;
-						j++;
-					}
-				}
-
-				setFetchedData(videoList);
+				setFetchedData(data.items);
 			} catch (error) {
 				console.log(error);
 			}
@@ -44,7 +31,7 @@ function Covid19Videos() {
 	}, []);
 
 	return (
-		<div className="covid19videos">
+		<div className="allvideos">
 			{fetchedData ? (
 				fetchedData.map((item, i) => {
 					return (
@@ -54,7 +41,7 @@ function Covid19Videos() {
 							title={item.snippet.title}
 							description={item.snippet.description}
 							date={item.snippet.publishedAt}
-							videoId={item.id.videoId}
+							videoId={item.snippet.resourceId.videoId}
 						></Video>
 					);
 				})
@@ -65,4 +52,4 @@ function Covid19Videos() {
 	);
 }
 
-export default Covid19Videos;
+export default AllVideos;

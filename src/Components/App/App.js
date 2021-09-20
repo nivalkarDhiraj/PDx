@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import AllVideos from "./AllVideos";
+import AllVideos from "../AllVideos/AllVideos";
 import "./App.css";
-import Covid19Videos from "./Covid19Videos";
-import SearchVideos from "./SearchVideos";
-import Navbar from "./Navbar";
+import Covid19Videos from "../Covid19Videos/Covid19Videos";
+import SearchVideos from "../SearchVideos/SearchVideos";
+import Navbar from "../Navbar/Navbar";
 
 function App() {
 	return (
