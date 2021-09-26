@@ -7,10 +7,6 @@ import { useState, useEffect } from "react";
 
 function App() {
 	const [searchText, setSearchText] = useState("");
-
-	useEffect(() => {
-		console.log("app", searchText);
-	})
 	
 	return (
 		<div className="App">
