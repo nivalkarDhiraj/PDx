@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
-	const [searchText, setSearchText] = useState("");
-	const history = useHistory();
-
+function Navbar({ searchText, setSearchText }) {
 	return (
 		<div className="navbar">
 			<div className="navbar__left">
@@ -21,14 +18,6 @@ function Navbar() {
 					placeholder="Search..."
 					value={searchText}
 					onChange={(e) => setSearchText(e.target.value)}
-					onKeyPress={(e) => {
-						if(e.key === "Enter") {
-							history.push({
-								pathname :"/searchvideos",
-								searchText : searchText
-							});
-						};
-					}}
 				></input>
 			</div>
 			<div className="navbar__right">

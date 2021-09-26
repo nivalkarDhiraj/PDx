@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import Video from "../Video/Video";
 import { WaveLoading } from "react-loadingg";
 import "./Covid19Videos.css";
-import {YOUTUBE_API_URL_SEARCH, CHANNEL_ID, API_KEY} from "../../Utils/config";
+import { YOUTUBE_API_URL_SEARCH, CHANNEL_ID, API_KEY } from "../../Utils/config";
 
-function Covid19Videos() {
+function Covid19Videos({ searchText }) {
 	const [fetchedData, setFetchedData] = useState("");
-	
+
 	useEffect(() => {
 		const fetchdata = async () => {
 			try {
@@ -23,7 +23,7 @@ function Covid19Videos() {
 				);
 				const data = await res.json();
 
-				const videoList = data.items;
+				let videoList = data.items;
 				const playlistName = "COVID-19 Vaccine Podcast";
 
 				for (let i = 0, j = 0; i < videoList.length; i++) {
@@ -35,13 +35,17 @@ function Covid19Videos() {
 					}
 				}
 
+				videoList = videoList.filter((video) =>
+					video.snippet.title.toLowerCase().includes(searchText.toLowerCase())
+				);
+
 				setFetchedData(videoList);
 			} catch (error) {
 				console.log(error);
 			}
 		};
 		fetchdata();
-	}, []);
+	}, [searchText]);
 
 	return (
 		<div className="covid19videos">

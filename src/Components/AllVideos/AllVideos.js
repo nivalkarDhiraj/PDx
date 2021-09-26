@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Video from "../Video/Video";
 import "./AllVideos.css";
 import { WaveLoading } from "react-loadingg";
-import {YOUTUBE_API_URL_PLAYLIST, API_KEY} from "../../Utils/config";
+import { YOUTUBE_API_URL_PLAYLIST, API_KEY } from "../../Utils/config";
 
-function AllVideos() {
+function AllVideos({ searchText }) {
 	const [fetchedData, setFetchedData] = useState("");
 
 	useEffect(() => {
@@ -21,14 +21,19 @@ function AllVideos() {
 						})
 				);
 				const data = await res.json();
+				let videoList = data.items;
 
-				setFetchedData(data.items);
+				videoList = videoList.filter((video) =>
+					video.snippet.title.toLowerCase().includes(searchText.toLowerCase())
+				);
+
+				setFetchedData(videoList);
 			} catch (error) {
 				console.log(error);
 			}
 		};
 		fetchdata();
-	}, []);
+	}, [searchText]);
 
 	return (
 		<div className="allvideos">
